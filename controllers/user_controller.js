@@ -10,7 +10,7 @@ module.exports = {
                 req.body.password = CryptoJS.AES.encrypt(req.body.password, 'jobApp2023').toString();
             }
 
-            const updatedUser = await User.findByIdAndUpdate(req.user.id, {
+            const updatedUser = await User.findByIdAndUpdate(req.params.id, {
                 $set: req.body // this means here we take everything from the body and update in the database
             }, { new: true });
 
@@ -31,7 +31,7 @@ module.exports = {
     // Delete function
     deleteUser: async (req, res) => {
         try {
-            await User.findByIdAndDelete(req.users.id)
+            await User.findByIdAndDelete(req.params.id)
             res.status(200).json("Account Successfully Deleted!")
         } catch (error) {
             res.status(500).json(error);
@@ -41,7 +41,7 @@ module.exports = {
     // Get User function
     getUser: async (req, res) => {
         try {
-            const user = await User.findById(req.user.id)
+            const user = await User.findById(req.params.id)
             const { password, __v, ...userData } = user._doc;
             res.status(200).json(userData);
         } catch (error) {
