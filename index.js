@@ -26,3 +26,7 @@ app.get('/', (req, res)=>{
 app.listen(process.env.PORT || 50001, console.log("App is running at port " + process.env.PORT || 5001)) //*
 
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YWE2N2QyNjNhMTUwMjZkMGQzYzc5NSIsImlzQWRtaW4iOnRydWUsImlzQWdlbnQiOnRydWUsImlhdCI6MTY4ODk5ODI2NywiZXhwIjoxNjkwODEyNjY3fQ.TTSvuLyqIFW97J2nXAqHHOw8z5TjQS56UWFiyCHgsPM
+
+// BaseUrl of server --> https://jobappserver-production.up.railway.app/
+// Admin token --> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3MGVjN2IwOTE4ZDUyYWI4MDk4NCIsImlzQWRtaW4iOnRydWUsImlzQWdlbnQiOmZhbHNlLCJpYXQiOjE3MDMyNDQ0MDcsImV4cCI6MTcwNTA1ODgwN30.7Svrg00go8ZdmSHkoYwRXYfp3yqvNSyWGNMsIywTpLs
+// Admin ID --> 658570ec7b0918d52ab80984

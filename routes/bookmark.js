@@ -2,7 +2,7 @@ const router = require("express").Router();
 const bookmarkController = require('../controllers/bookmark_controller');
 const {verifyToken, verifyAndAuthorization} = require("../middleware/verifyToken")
 
-// Create Boolmark
+// Create Bookmark
 router.post('/', verifyAndAuthorization, bookmarkController.createBookmark)
 
 // Delete Bookmark
