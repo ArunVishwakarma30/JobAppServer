@@ -9,12 +9,12 @@ const verifyToken = (req, res, next) => {
 
         jwt.verify(token, "jobApp2023", async (err, user) => {
             if (err) {
-               return res.status(403).json("Invalid token");
-                
+                return res.status(403).json("Invalid token");
+
             }
             req.user = user;
             // console.log(user);
-            next(); 
+            next();
         })
     } else {
         res.status(401).json("You are not authenticated!")
@@ -29,7 +29,7 @@ const verifyAndAuthorization = (req, res, next) => {
         else {
             res.status(403).json("You are restricted to performing this task!")
         }
-    }) 
+    })
 }
 
 const verifyIsAdmin = (req, res, next) => {
@@ -40,7 +40,7 @@ const verifyIsAdmin = (req, res, next) => {
         else {
             res.status(403).json("You are restricted to performing this task!")
         }
-    }) 
+    })
 }
 
-module.exports = { verifyToken, verifyAndAuthorization,  verifyIsAdmin  }
+module.exports = { verifyToken, verifyAndAuthorization, verifyIsAdmin }

@@ -10,6 +10,10 @@ folder structure
         and send back appropriate response 
         the controller function will receive reqest and response object as parameter to perform necessary task
 
+// while managining API request , when we use 
+//         1. req.params.PARAMETER_NAME --> this get the value from link e.g ( https://google.com/api/login/PARAMETER_NAME)  
+//         2. req.user.PARAMETER_NAME --> this get the value from token which we pass in the request header   
+
 2. Middleware
     --> here we will perform authentication ,
         error handling,
