@@ -18,13 +18,17 @@ module.exports = {
             ]
         })
             .populate("users", "-password")
-            .populate("latestMessage")
+            .populate("latestMessage");
+
+            console.log(isChat);
 
         isChat = await User.populate(isChat, {
             path: "latestMessage.sender",
             select: "userName profile email"
 
         })
+ 
+        console.log(isChat);
 
         if (isChat.length > 0) {
             res.send(isChat[0])
