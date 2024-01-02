@@ -69,6 +69,7 @@ IO.on("connection", (socket) => {
 
     socket.on("new message", (newMessgeRecieved) => {
         var chat = newMessgeRecieved.chat;
+        print(chat);
         var room = chat._id;
 
         var sender = newMessgeRecieved.sender;
