@@ -69,7 +69,8 @@ IO.on("connection", (socket) => {
 
     socket.on("new message", (newMessgeRecieved) => {
         var chat = newMessgeRecieved.chat;
-        console.log(`chat : ${chat}`);
+       console.log(`newMessgeRecieved ${newMessgeRecieved }`);
+       console.log(`newMessgeRecieved ${newMessgeRecieved.chat }`);
 
         var room = chat._id;
 
