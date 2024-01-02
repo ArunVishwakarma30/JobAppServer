@@ -12,7 +12,6 @@ const user = require('./models/user');
 
 const app = express(); //* instance of express
 dotenv.config();
-
 mongoose.connect(process.env.MONGO_URL) //* 
     .then(() => console.log("Database is connected"))
     .catch((err) => console.log(err))
@@ -66,7 +65,7 @@ IO.on("connection", (socket) => {
     socket.on('join chat', (room) => {
         socket.join(room);
         console.log("User joined : " + room);
-    })
+    }) 
 
     socket.on("new message", (newMessgeRecieved) => {
         var chat = newMessgeRecieved.chat;
