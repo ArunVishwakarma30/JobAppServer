@@ -77,7 +77,6 @@ IO.on("connection", (socket) => {
             console.log("Sender not defiend");
             return;
         }
-
         var senderId = sender._id;
         console.log(`Message senderId : ${senderId}`);
 
